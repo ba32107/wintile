@@ -223,6 +223,8 @@ function moveWindow(direction) {
 				placeWindow("topleft", app);
 			} else if (pos == "bottomright") {
 				placeWindow("bottomleft", app);
+			} else if (pos == "right") {
+				placeWindow("floating", app);
 			} else {
 				placeWindow("left", app);
 			}
@@ -241,6 +243,8 @@ function moveWindow(direction) {
 				placeWindow("topright", app);
 			} else if (pos == "bottomleft") {
 				placeWindow("bottomright", app);
+			} else if (pos == "left") {
+				placeWindow("floating", app);
 			} else {
 				placeWindow("right", app);
 			}
@@ -249,11 +253,11 @@ function moveWindow(direction) {
 			if (pos == "left")
 				placeWindow("topleft", app);
 			else if (pos == "bottomleft")
-				placeWindow("left", app);
+				placeWindow("topleft", app);
 			else if (pos == "right")
 				placeWindow("topright", app);
 			else if (pos == "bottomright")
-				placeWindow("right", app);
+				placeWindow("topright", app);
 			else
 				placeWindow("maximize", app);
 			break;
@@ -261,11 +265,11 @@ function moveWindow(direction) {
 			if (pos == "left")
 				placeWindow("bottomleft", app);
 			else if (pos == "topleft")
-				placeWindow("left", app);
+				placeWindow("bottomleft", app);
 			else if (pos == "right")
 				placeWindow("bottomright", app);
 			else if (pos == "topright")
-				placeWindow("right", app);
+				placeWindow("bottomright", app);
 			else if (pos == "maximized")
 				placeWindow("floating", app);
 			break;
